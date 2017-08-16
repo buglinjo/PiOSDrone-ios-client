@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B2FC80A1F42A8340010691F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9B2FC8091F42A8340010691F /* Podfile */; };
 		9B7C70B71F42A328004AAD3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7C70B61F42A328004AAD3D /* AppDelegate.swift */; };
 		9B7C70B91F42A328004AAD3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7C70B81F42A328004AAD3D /* ViewController.swift */; };
 		9B7C70BC1F42A328004AAD3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7C70BA1F42A328004AAD3D /* Main.storyboard */; };
 		9B7C70BE1F42A328004AAD3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7C70BD1F42A328004AAD3D /* Assets.xcassets */; };
 		9B7C70C11F42A328004AAD3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7C70BF1F42A328004AAD3D /* LaunchScreen.storyboard */; };
+		9CEFCCA8E2F3905065DD0040 /* Pods_PiOSDrone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8501E9D32594DF55990DAEC8 /* Pods_PiOSDrone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7576CD85DAB4EB78DEE35DA7 /* Pods-PiOSDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiOSDrone.release.xcconfig"; path = "Pods/Target Support Files/Pods-PiOSDrone/Pods-PiOSDrone.release.xcconfig"; sourceTree = "<group>"; };
+		8501E9D32594DF55990DAEC8 /* Pods_PiOSDrone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiOSDrone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B2FC8091F42A8340010691F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		9B7C70B31F42A328004AAD3D /* PiOSDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiOSDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7C70B61F42A328004AAD3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B7C70B81F42A328004AAD3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		9B7C70BD1F42A328004AAD3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B7C70C01F42A328004AAD3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B7C70C21F42A328004AAD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0068D73A04FCF469599BC8E /* Pods-PiOSDrone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiOSDrone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PiOSDrone/Pods-PiOSDrone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEFCCA8E2F3905065DD0040 /* Pods_PiOSDrone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BDDB59DFF545C0F6C45B557 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0068D73A04FCF469599BC8E /* Pods-PiOSDrone.debug.xcconfig */,
+				7576CD85DAB4EB78DEE35DA7 /* Pods-PiOSDrone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9B7C70AA1F42A328004AAD3D = {
 			isa = PBXGroup;
 			children = (
 				9B7C70B51F42A328004AAD3D /* PiOSDrone */,
 				9B7C70B41F42A328004AAD3D /* Products */,
+				9B2FC8091F42A8340010691F /* Podfile */,
+				3BDDB59DFF545C0F6C45B557 /* Pods */,
+				B4639F523EF70AF5D1537A03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +83,14 @@
 			path = PiOSDrone;
 			sourceTree = "<group>";
 		};
+		B4639F523EF70AF5D1537A03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8501E9D32594DF55990DAEC8 /* Pods_PiOSDrone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B7C70C51F42A328004AAD3D /* Build configuration list for PBXNativeTarget "PiOSDrone" */;
 			buildPhases = (
+				1C5DA6D41FE906B7F611994F /* [CP] Check Pods Manifest.lock */,
 				9B7C70AF1F42A328004AAD3D /* Sources */,
 				9B7C70B01F42A328004AAD3D /* Frameworks */,
 				9B7C70B11F42A328004AAD3D /* Resources */,
+				3FF8DD672ECC38B46A2273E2 /* [CP] Embed Pods Frameworks */,
+				17BB61D2A3636FD7B8936414 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +126,7 @@
 				TargetAttributes = {
 					9B7C70B21F42A328004AAD3D = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = V9VFZF9659;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,11 +156,68 @@
 			files = (
 				9B7C70C11F42A328004AAD3D /* LaunchScreen.storyboard in Resources */,
 				9B7C70BE1F42A328004AAD3D /* Assets.xcassets in Resources */,
+				9B2FC80A1F42A8340010691F /* Podfile in Resources */,
 				9B7C70BC1F42A328004AAD3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17BB61D2A3636FD7B8936414 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiOSDrone/Pods-PiOSDrone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C5DA6D41FE906B7F611994F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PiOSDrone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FF8DD672ECC38B46A2273E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PiOSDrone/Pods-PiOSDrone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PiOSDrone/Pods-PiOSDrone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B7C70AF1F42A328004AAD3D /* Sources */ = {
@@ -260,8 +348,10 @@
 		};
 		9B7C70C61F42A328004AAD3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0068D73A04FCF469599BC8E /* Pods-PiOSDrone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V9VFZF9659;
 				INFOPLIST_FILE = PiOSDrone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = buglinjo.me.PiOSDrone;
@@ -272,8 +362,10 @@
 		};
 		9B7C70C71F42A328004AAD3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7576CD85DAB4EB78DEE35DA7 /* Pods-PiOSDrone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V9VFZF9659;
 				INFOPLIST_FILE = PiOSDrone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = buglinjo.me.PiOSDrone;
@@ -301,6 +393,7 @@
 				9B7C70C71F42A328004AAD3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
