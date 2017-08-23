@@ -5,6 +5,6 @@ target 'PiOSDrone' do
   use_frameworks!
 
   # Pods for PiOSDrone
-  pod 'Socket.IO-Client-Swift', '~> 11.0.2' # Or latest version
+  pod 'Starscream', '~> 2.0.3'
 
 end

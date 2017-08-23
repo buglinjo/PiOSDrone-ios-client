@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SocketIO
+import Starscream
 
 class ViewController: UIViewController {
     
@@ -17,23 +17,49 @@ class ViewController: UIViewController {
     	}
     }
     
+    @IBOutlet weak var connectOrDisconnectButton: UIButton!
+    
     var globalThrottleValue: Int = 0;
+    
+    var status = false;
+    
+    @IBOutlet weak var statusLabel: UILabel!
 
     @IBOutlet weak var throttle: UILabel!
     
-    let socket = SocketIOClient(socketURL: URL(string: "http://192.168.1.2:3000")!, config: [.log(true), .compress]);
-
+    
+    var socket = WebSocket(url: URL(string: "ws://192.168.4.1:81/")!)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        connect()
-        sendMessage(value: "Hello Socket.IO!!!")
+        socket.delegate = self as? WebSocketDelegate
         
-        // Do any additional setup after loading the view, typically from a nib.
+        socket.onConnect = {
+            print("websocket is connected")
+            self.status = true
+            self.statusLabel.text = "Status: Connected"
+            self.connectOrDisconnectButton.setTitle("Disconnect", for: .normal)
+        }
+        
+        socket.onDisconnect = { (error: NSError?) in
+            print("websocket is disconnected: \(String(describing: error?.localizedDescription))")
+            self.status = false
+            self.statusLabel.text = "Status: Not Connected"
+            self.connectOrDisconnectButton.setTitle("Connect", for: .normal)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func connectOrDisconnect(_ sender: Any) {
+        if !status {
+            socket.connect()
+        } else {
+            socket.disconnect()
+        }
     }
 
     @IBAction func throttleChanged(_ sender: UISlider) {
@@ -41,20 +67,8 @@ class ViewController: UIViewController {
         if globalThrottleValue != throttleVal {
             globalThrottleValue = throttleVal
             throttle.text = String(throttleVal)
-            sendMessage(value: String(throttleVal))
+            socket.write(string: String(throttleVal))
         }
-    }
-    
-    func connect() {
-        socket.on(clientEvent: .connect) {data, ack in
-            print("socket connected")
-        }
-        
-        socket.connect()
-    }
-    
-    func sendMessage(value: String) {
-        socket.emit("data", value)
     }
 }
 

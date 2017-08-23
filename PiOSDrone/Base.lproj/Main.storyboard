@@ -34,19 +34,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYM-zw-oRh">
+                                <rect key="frame" x="158" y="47" width="59" height="30"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="connectOrDisconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbs-iw-Ehe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Not Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lec-Bn-e2y">
+                                <rect key="frame" x="100" y="85" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="lec-Bn-e2y" firstAttribute="centerX" secondItem="GYM-zw-oRh" secondAttribute="centerX" id="0Qa-6f-Dwa"/>
                             <constraint firstItem="8UU-q6-pPE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="61j-we-2sz"/>
                             <constraint firstItem="NLS-0j-w2l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E15-m2-AMA"/>
+                            <constraint firstItem="GYM-zw-oRh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="142" id="Ix3-6q-EUy"/>
                             <constraint firstItem="NLS-0j-w2l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WnD-30-hJS"/>
+                            <constraint firstItem="lec-Bn-e2y" firstAttribute="top" secondItem="GYM-zw-oRh" secondAttribute="bottom" constant="8" symbolic="YES" id="Zul-jA-YNA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GYM-zw-oRh" secondAttribute="trailing" constant="142" id="eLA-8o-5FC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8UU-q6-pPE" secondAttribute="bottom" constant="20" id="jQM-Gz-zqd"/>
+                            <constraint firstItem="GYM-zw-oRh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="lFB-ya-eXa"/>
                             <constraint firstItem="8UU-q6-pPE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lwc-GI-sgB"/>
                             <constraint firstAttribute="trailing" secondItem="NLS-0j-w2l" secondAttribute="trailing" id="yi2-Du-Da6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="connectOrDisconnectButton" destination="GYM-zw-oRh" id="x9v-Eu-IvQ"/>
                         <outlet property="slider" destination="NLS-0j-w2l" id="4zw-7p-cxs"/>
+                        <outlet property="statusLabel" destination="lec-Bn-e2y" id="h8X-QN-yry"/>
                         <outlet property="throttle" destination="8UU-q6-pPE" id="kh6-GH-N1M"/>
                     </connections>
                 </viewController>
